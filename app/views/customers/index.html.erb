@@ -27,6 +27,9 @@
   <ol class="list-group">
   <% @customers.each do |customer| %>
     <li class="list-group-item clearfix">
+      <h3 class="pull-left">
+        <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d51?s=50&r=pg&d=retro" alt="gravatar" class="img-circle"/>
+      </h3>
       <h3 class="pull-right">
         <small class="text-uppercase">Joined </small>
         <%= l customer.created_at.to_date %>
