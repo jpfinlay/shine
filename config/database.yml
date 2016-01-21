@@ -17,8 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: utf8
-  username: shine
-  password: shine
+  username: jpfinlay
+  password: <%= ENV['PSQL_PASSWORD'] %>
   host: localhost
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: shine_production
-  username: shine
+  username: postgres
   password: <%= ENV['SHINE_DATABASE_PASSWORD'] %>
